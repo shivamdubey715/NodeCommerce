@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        main{
+            padding: 1rem;
+        }
+        .main-header{
+            width: 100%;
+            height: 3.5rem;
+            background-color: rgb(233, 219, 56);
+        }
+        .main-header-nav{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+        .main-header-item-list{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .main-header-item{
+            margin: 0 1rem;
+            padding: 0;
+        }
+        .main-header-item a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .main-header-item a:hover,
+        .main-header-item a:active,
+        .main-header-item a.active{
+            color: #3e00a1;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header-nav">
+            <ul class="main-header-item-list">
+                <li class="main-header-item"><a class="active" href="/">Shop</a></li>
+                <li class="main-header-item"><a href="/admin/add-product">Add Product</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Page not found!</h1>
+</body>
+</html>
