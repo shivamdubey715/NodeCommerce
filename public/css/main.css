@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 body{
     padding: 0;
     margin: 0;
@@ -48,33 +50,33 @@ main{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   }
   
-  .card__header,
-  .card__content {
+  .card-header,
+  .card-content {
     padding: 1rem;
   }
   
-  .card__header h1,
-  .card__content h1,
-  .card__content h2,
-  .card__content p {
+  .card-header h1,
+  .card-content h1,
+  .card-content h2,
+  .card-content p {
     margin: 0;
   }
   
-  .card__image {
+  .card-image {
     width: 100%;
   }
   
-  .card__image img {
+  .card-image img {
     width: 100%;
   }
   
-  .card__actions {
+  .card-actions {
       padding: 1rem;
       text-align: center;
   }
   
-  .card__actions button,
-  .card__actions a {
+  .card-actions button,
+  .card-actions a {
       margin: 0 0.25rem;
   }
   
