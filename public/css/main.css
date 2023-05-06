@@ -39,6 +39,10 @@ main{
 .main-header-item a.active{
     color: black;
 }
+
+.centered{
+  text-align: center;
+}
 .grid {
     display: flex;
     flex-wrap: wrap;
