@@ -1,7 +1,8 @@
-.product-form {
-    width: 30rem;
+/* .product-form {
+    width: 20rem;
     max-width: 90%;
     margin: auto;
+    display: block;
   }
 
   .form-control{
@@ -32,4 +33,33 @@
   button:active {
     background-color: #3e00a1;
     color: white;
-  }
+  } */
+
+
+  .product-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.product-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product-price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    text-align: center;
+}

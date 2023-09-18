@@ -1,0 +1,40 @@
+<%- include('../includes/head.ejs') %>
+<!-- <link rel="stylesheet" href="/css/cart.css"> -->
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main>
+            <ul class="cart-item-list">
+                <% products.forEach(p => { %>
+                    <li class="cart-item">
+                        <h1><%= p.productId.title%></h1>
+                        <h2>Quantity: <%= p.quantity %></h2>
+                        
+                    </li>
+                <% }) %>
+            </ul>
+            <div>
+                <h2>Total: <%=totalSum %></h2>
+            </div>
+            <div class="centered">
+                <button id="order-btn" class="btn">ORDER</button>
+                <script src="https://js.stripe.com/v3/"></script>
+                <script>
+                    var stripe = Stripe('pk_test_51NgAB1SFjsMedLJ0t83uriO98jw0wANlM2ocBefdKYVupIns0VNXsAv33ZhjY8K3xFmaWDLBpmMxqKXNJR5BSU3o00RmAIafzt');
+                    var orderBtn = document.getElementById('order-btn');
+                    orderBtn.addEventListener('click', function(){
+                        fetch('/checkout/create-session', { method: 'GET' })
+                            .then(response => response.json())
+                            .then(data => {
+                                return stripe.redirectToCheckout({ sessionId: data.sessionId });
+                            })
+                            .catch(error => {
+                                console.log('Error creating session:', error);
+                            });
+                    });
+                </script>
+            </div>
+            
+        </main>
+        <%- include('../includes/end.ejs') %>
