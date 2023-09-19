@@ -10,7 +10,7 @@ const errorController = require("./controllers/404");
 const csrf = require("csurf");
 const flash = require("connect-flash");
 const multer = require("multer");
-const helmet = require("helmet");
+// const helmet = require("helmet");
 const compression = require("compression");
 const morgan = require("morgan");
 require("dotenv").config();
@@ -111,7 +111,7 @@ const accessLogStream = fs.createWriteStream(
   { flags: "a" }
 );
 
-app.use(helmet());
+// app.use(helmet());
 app.use(compression());
 app.use(morgan("combined", { stream: accessLogStream }));
 
