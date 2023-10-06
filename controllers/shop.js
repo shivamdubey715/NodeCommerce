@@ -5,7 +5,7 @@ const path = require("path");
 const PDFDocument = require("pdfkit");
 const stripe = require('stripe')(process.env.STRIPE_KEY)
 // sk_test_51NgAB1SFjsMedLJ00hQyApMZbFhBNyf9tz7TdrJSrBfSz7kyxTcPe3eBzcKrg9JFm0PF2RngSLR9lsjH6ay8Ql7S00qjTfTzQT
-const ITEMS_PER_PAGE = 1;
+const ITEMS_PER_PAGE = 4;
 
 exports.getProducts = (req, res, next) => {
   const page = req.query.page || 1; // Use query parameter for page
